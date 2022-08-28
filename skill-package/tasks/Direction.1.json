@@ -1,0 +1,108 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Task to set the direction.",
+      "version": "1",
+      "x-amzn-alexa-access-scope": "public",
+      "x-amzn-display-details": {
+        "en-US": {
+         "title": "Choose a direction to open the Daily Walk Game",
+         "description":"You can specify the direction you want to go in advance."
+        }
+      }
+    },
+    "tags": [{
+      "name": "Direction"
+    }],
+    "paths": {
+      "/Direction": {
+        "summary": "Direction",
+        "description": "A custom task that allows you to set the direction",
+        "post": {
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Input"
+                },
+                "examples": {
+                  "SetDirection": {
+                      "summary": "Specify a direction",
+                      "description": "This is a task for specifying the direction in advance.",
+                      "value": {
+                          "enumName": "0"
+                      }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "when it successfully.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SuccessfulResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "When the given parameters fail validations"
+            },
+            "500": {
+              "description": "When it fails"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Input": {
+          "type": "object",
+          "properties": {
+            "enumName": {
+              "type": "string",
+              "enum": [
+                "0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"
+              ],
+              "x-amzn-display-details":{
+                "en-US":{
+                  "name": "Choose direction",
+                  "enums": {
+                     "0":"North",
+                     "1":"North-northeast",
+                     "2":"Northeast",
+                     "3":"East-northeast",
+                     "4":"East", 
+                     "5":"East-southeast",
+                     "6":"Southeast",
+                     "7":"South-southeast",
+                     "8":"South",
+                     "9":"South-southwest",
+                    "10":"Southwest",
+                    "11":"West-southwest",
+                    "12":"West",
+                    "13":"West-northwest",
+                    "14":"Northwest",
+                    "15":"North-northwest"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "SuccessfulResponse": {
+          "type": "object",
+          "properties": {
+            "endTime": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      }
+    }
+ }

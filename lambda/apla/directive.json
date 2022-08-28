@@ -1,0 +1,6 @@
+{
+    "type": "Alexa.Presentation.APLA.RenderDocument",
+    "token": "token",
+    "document": "apla_document",
+    "datasources": "apla_data"
+}

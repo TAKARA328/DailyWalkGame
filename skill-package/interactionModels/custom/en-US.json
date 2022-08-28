@@ -1,0 +1,113 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "daily walk game",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": [
+                        "i'm sure",
+                        "sure",
+                        "okay",
+                        "its okay",
+                        "Of course"                        
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CheckIntent",
+                    "slots": [],
+                    "samples": [
+                        "check",
+                        "please check",
+                        "check please",
+                        "check here"
+                    ]
+                },
+                {
+                    "name": "HintIntent",
+                    "slots": [],
+                    "samples": [
+                        "hint",
+                        "please hint",
+                        "hint please",
+                        "super hint",
+                        "give me a hint",
+                        "please give me a hint",
+                        "clue",
+                        "please clue",
+                        "clue please",
+                        "give me a clue",
+                        "please give me a clue"
+                    ]
+                },
+                {
+                    "name": "StartWalkIntent",
+                    "slots": [],
+                    "samples": [
+                        "start a walk",
+                        "i start",
+                        "walk",
+                        "i walk",
+                        "i will start walk.",
+                        "i will start walking."
+                    ]
+                },
+                {
+                    "name": "AnotherIntent",
+                    "slots": [],
+                    "samples": [
+                        "change to another goal",
+                        "I want to change my goal",
+                        "I wanna change my goal",
+                        "I wanna change",
+                        "change",
+                        "set another goal",
+                        "I want to set another goal",
+                        "I wanna set another goal",
+                        "another",
+                        "Make it another goal.",
+                        "set another target",
+                        "I want to set another target",
+                        "I wanna set another target",
+                        "Make it another target."
+                    ]
+                },
+                {
+                    "name": "NewGameIntent",
+                    "slots": [],
+                    "samples": [
+                        "new game",
+                        "I want to play new game",
+                        "next game"
+                    ]
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
+        }
+    }
+  }
+  

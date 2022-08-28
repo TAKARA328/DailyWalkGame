@@ -1,0 +1,90 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "It is a skill to enjoy a walk. Let's go outside with the skill.",
+          "examplePhrases": [
+            "Alexa open daily walk game",
+            "check",
+            "hint"
+          ],
+          "keywords": [
+            "walking",
+            "motion",
+            "location information",
+            "Routine",
+            "distance",
+            "direction"
+          ],
+          "name": "Daily Walk Game",
+          "description": "It is a skill to enjoy a walk. Let's go outside with the skill.\nYou need to use a device that can get location information. It's the Alexa App and Echo Buds.\n\nOVERVIEW\nWhen the skill is Launched, it announces the direction and distance of the goal. Walk towards that point. And when you reach the goal point, please \"check\". The skill measures whether the direction is correct and how close the distance is to the destination, and announces the results. If the directions match and the distance difference is 0, you are great.\nThe distance announced by the skill is around 1000 meters.\n\nVOICE COMMAND\nHINT : You can know the current direction and distance.\nCHECK : Finish the game and judge.\nNEW GAME : Start a new game.\nHELP : Give skill help.\nCANCEL / STOP / NO : Finish the skill.\n\nCONVERSATION FLOW EXAMPLE\nUser: Launch the skill.\nAlexa : This is the starting point. Is it OK to use location information?\nUser : OK.\n       (Get location information.)\nAlexa: Announce direction and distance. Let's get started.\n       (Let's walk toward the goal point.)\nUser: Give me a hint.\nAlexa: Give you a hint.\nUser: When you get to your destination, say \"check\".\nAlexa: Announcement of results.\n\nADDITIONAL INFORMATION\nRegistering this skill in a routine will help you take a walk on a regular basis. You can also pre-set the direction you want to go by using routines to launch your skill.\n\nWARNING\nPlease walk on the sidewalk.\nIf the direction specified by the skill is dangerous, stop using it. Or change your destination.\nFor example, cliffs, seas, rivers, highways, railroad tracks, exclusion zones, private land etc.\nDo not use on days when it is not suitable for a walk. For example, rain, storm etc.",
+          "smallIconUri": "file://assets/images/en-US_smallIcon.png",
+          "largeIconUri": "file://assets/images/en-US_largeIcon.png"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "I'm sorry again. Modified custom task titles and made the characters consistent. #alexaskillschallenge \n\n Skills that use location information. I wanted to make a skill specialized for Echo Buds.\nLaunch the skill and follow the instructions. When the game starts, walk away. The session expires when the game starts.\nIf you want to hear a hint on the way, you can listen to it with a one-shot start. When you reach your destination, check it out. You can also check it with one-shot startup.\nthat's all.\n",
+      "category": "HEALTH_AND_FITNESS",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "tasks": [
+          {
+            "name": "Direction",
+            "version": "1"
+          }
+        ],
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:023972248338:function:ask-walkgame-default-default-1659662469172"
+        },
+        "regions": {
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:023972248338:function:ask-walkgame-default-default-1659662469172"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:023972248338:function:ask-walkgame-default-default-1659662469172"
+            }
+          },
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:023972248338:function:ask-walkgame-default-default-1659662469172"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "events": {
+      "subscriptions": [
+        {
+          "eventName": "SKILL_DISABLED"
+        }
+      ],
+      "endpoint": {
+        "uri": "arn:aws:lambda:us-east-1:023972248338:function:ask-walkgame-default-default-1659662469172"
+      }
+    },
+    "permissions": [
+      {
+        "name": "alexa::devices:all:geolocation:read"
+      }
+    ],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": false,
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "https://takara-html.s3.us-west-2.amazonaws.com/PrivacyPolicy_DailyWalkGame.html"
+        }
+      }
+    }
+  }
+}
